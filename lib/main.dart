@@ -1,5 +1,6 @@
+import 'package:tarealogin/shared/constante.dart';
 import 'package:flutter/material.dart';
-import 'package:tarealogin/pages/homepage.dart';
+import 'package:tarealogin/shared/rutas.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,9 +11,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(useMaterial3: true),
+      initialRoute: Rutas.login.name,
+      routes: constantes,
     );
   }
 }
